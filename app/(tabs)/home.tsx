@@ -1,10 +1,11 @@
+import React from 'react' 
 import { View, Text } from 'react-native'
-import React from 'react'
+import Banner1 from '@/components/home/Banner1'
 
 const Index = () => {
   return (
     <View>
-      <Text>Hello World!</Text>
+      <Banner1 />
     </View>
   )
 }
