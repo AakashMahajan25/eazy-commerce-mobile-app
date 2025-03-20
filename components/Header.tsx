@@ -8,8 +8,9 @@ const Header = () => {
 
   return (
     <View className='bg-white h-20 px-5 flex flex-row justify-between items-center'>
+      <View></View>
         <View>
-            <Text className='font-semibold text-3xl'>{useHeaderTitle()}</Text>
+            <Text className='font-bold text-2xl'>{useHeaderTitle()}</Text>
         </View>
       <View className='flex flex-row gap-5'>
         <Link href={'/search'}><Ionicons name='search-outline' size={36} /></Link>

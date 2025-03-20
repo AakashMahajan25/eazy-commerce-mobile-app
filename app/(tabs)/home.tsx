@@ -1,12 +1,16 @@
 import React from 'react' 
-import { View, Text } from 'react-native'
-import Banner1 from '@/components/home/Banner1'
+import { View, ScrollView } from 'react-native'
+// import Banner1 from '@/components/home/Banner1'
+import Categories from '@/components/home/Categories'
+import FeaturedProducts from '@/components/home/FeaturedProducts'
 
 const Index = () => {
   return (
-    <View>
-      <Banner1 />
-    </View>
+    <ScrollView>
+      {/* <Banner1 /> */}
+      <Categories />
+      <FeaturedProducts />
+    </ScrollView>
   )
 }
 
