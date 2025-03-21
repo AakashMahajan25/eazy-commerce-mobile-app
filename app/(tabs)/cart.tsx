@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
+import CartList from '@/components/cart/CartList'
+import PromoCode from '@/components/cart/PromoCode'
+import SummaryCheckout from '@/components/cart/SummaryCheckout'
 
-const Index = () => {
+const cart = () => {
   return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
+    <ScrollView>
+      <CartList />
+      <PromoCode />
+      <SummaryCheckout />
+    </ScrollView>
   )
 }
 
-export default Index
+export default cart
