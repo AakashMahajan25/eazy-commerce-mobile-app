@@ -1,11 +1,16 @@
-import { View, Text } from 'react-native'
+import { ScrollView } from 'react-native'
 import React from 'react'
+import CategorySlider from '@/components/categories/CategorySlider'
+import PopularCategories from '@/components/categories/PopularCategories'
+import AllCategories from '@/components/categories/AllCategories'
 
 const Index = () => {
   return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
+    <ScrollView>
+      <CategorySlider />
+      <PopularCategories />
+      <AllCategories />
+    </ScrollView>
   )
 }
 

@@ -4,6 +4,7 @@ import Category1 from '@/assets/images/home/category1.png'
 import Category2 from '@/assets/images/home/category2.png'
 import Category3 from '@/assets/images/home/category3.png'
 import Category4 from '@/assets/images/home/category4.png'
+import Category5 from '@/assets/images/home/category5.png'
 
 const Categories = () => {
   const categories = [
@@ -24,8 +25,8 @@ const Categories = () => {
     },
     {
       id: 4,
-      name: 'Accessories',
-      image: Category4
+      name: 'Footwear',
+      image: Category5
     },
     {
       id: 5,
