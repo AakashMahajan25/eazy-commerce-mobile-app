@@ -13,33 +13,37 @@ const FeaturedProducts = () => {
       name: 'Summer Floral Dress',
       price: 89.99,
       rating: 4.5,
-      image: Product1
+      image: Product1,
+      trending: false
     },
     {
       id: 2,
       name: 'Classic Denim Jacket',
       price: 129.99, 
       rating: 4.8,
-      image: Product2
+      image: Product2,
+      trending: false
     },
     {
       id: 3,
       name: 'Leather Crossbody',
       price: 159.99,
       rating: 4.7,
-      image: Product3
+      image: Product3,
+      trending: false
     },
     {
       id: 4,
       name: 'White Sneakers',
       price: 79.99,
       rating: 4.9,
-      image: Product4
+      image: Product4,
+      trending: false
     }
   ];
 
   return (
-    <View className='bg-[#808080] py-3'>
+    <View className='bg-gray-200 py-3'>
       <Text className='ml-[15px] mb-1 font-semibold text-3xl'>Featured Products</Text>
       <ScrollView
         showsVerticalScrollIndicator={false}

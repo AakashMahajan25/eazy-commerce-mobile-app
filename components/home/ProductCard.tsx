@@ -5,13 +5,19 @@ interface ProductType {
   id: number;
   name: string;
   price: number;
-  rating: number;
+  rating?: number;
   image: any;
+  trending?: boolean;
 }
 
 const ProductCard = ({ product }: { product: ProductType }) => {
     return (
       <TouchableOpacity style={productStyles.productItem}>
+        {product.trending && (
+          <View style={productStyles.trendingBadge}>
+            <Text style={productStyles.trendingText}>Trending</Text>
+          </View>
+        )}
         <Image
           source={product.image as any}
           style={productStyles.productImage}
@@ -20,11 +26,13 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           <Text style={productStyles.productName}>{product.name}</Text>
           <View style={productStyles.priceRatingContainer}>
             <Text style={productStyles.price}>${product.price}</Text>
-            <View style={productStyles.rating}>
-              <Text style={productStyles.rating}>
-                <Text style={{color: '#FACC15', fontSize: 15}}>★</Text> {product.rating}
-              </Text>
-            </View>
+            {product.rating && (
+              <View style={productStyles.rating}>
+                <Text style={productStyles.rating}>
+                  <Text style={{color: '#FACC15', fontSize: 15}}>★</Text> {product.rating}
+                </Text>
+              </View>
+            )}
           </View>
         </View>
       </TouchableOpacity>
@@ -77,5 +85,20 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       fontSize: 15,
       flexDirection: 'row',
       alignItems: 'center',
+    },
+    trendingBadge: {
+      position: 'absolute',
+      top: 10,
+      left: 10,
+      backgroundColor: '#FF4D4D',
+      paddingHorizontal: 10,
+      paddingVertical: 5,
+      borderRadius: 16,
+      zIndex: 1,
+    },
+    trendingText: {
+      color: '#fff',
+      fontSize: 14,
+      fontWeight: 'bold',
     }
   });
