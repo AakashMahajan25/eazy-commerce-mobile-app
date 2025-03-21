@@ -23,7 +23,7 @@ const TrendingNow = () => {
   ];
 
   return (
-    <View className='bg-gray-200 py-3'>
+    <View className='bg-white py-3'>
       <Text className='ml-[15px] mb-1 font-semibold text-3xl'>Trending Now</Text>
       <ScrollView
         showsVerticalScrollIndicator={false}
