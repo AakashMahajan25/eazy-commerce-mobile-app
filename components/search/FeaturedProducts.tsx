@@ -43,7 +43,8 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <View className='bg-white'>
+    <View className='bg-gray-200 py-3'>
+      <Text className='ml-[15px] mb-1 font-semibold text-3xl'>Featured Products</Text>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
